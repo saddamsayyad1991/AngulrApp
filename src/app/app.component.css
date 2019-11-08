@@ -1,0 +1,29 @@
+.navbar {
+    height: 6.5rem;
+    background-color: #282828 !important;
+    font-size: 1rem;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    padding: 0px 2rem !important
+}
+
+.nav-item a span {
+    vertical-align: 9px;
+    padding-left: 5px;
+}
+
+.nav-link .gf{
+    width: 2.5rem;
+}
+
+.logo {
+    width: 13rem;
+}
+
+
+
+.active .logo  {
+filter: url(#id-of-your-filter);
+}

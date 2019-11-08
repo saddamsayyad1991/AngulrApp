@@ -1,0 +1,77 @@
+.modal-title {
+    font-size: 2.5rem !important;
+    font-weight: 400 !important;
+}
+
+.link {
+    cursor: pointer;
+}
+
+
+.customRadio {
+    font-size: .8rem;
+    margin-left: 40px;
+}
+
+[type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid #feaf2a  !important;
+}
+[type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border-radius: 50% !important;
+}
+
+[type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid #feaf2a ;
+}
+[type="radio"]:not(:checked)+span:after, [type="radio"]:checked+span:before, [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border-radius: 50%;
+}
+[type="radio"]:checked+span:before {
+    border: 2px solid transparent;
+}
+
+
+[type="radio"].with-gap:checked+span:after {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+}
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: #feaf2a ;
+}
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid #feaf2a ;
+}
+
+[type="radio"]:not(:checked)+span:before, [type="radio"]:not(:checked)+span:after, [type="radio"]:checked+span:before, [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border-radius: 50%;
+}
+
+[type="radio"]:not(:checked), [type="radio"]:checked {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+[type="checkbox"], [type="radio"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="radio"]:not(:checked)+span:before, [type="radio"]:not(:checked)+span:after {
+    border: 2px solid #feaf2a ;
+}
+[type="radio"]:not(:checked)+span:before, [type="radio"]:not(:checked)+span:after, [type="radio"]:checked+span:before, [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border-radius: 50%;
+}
+[type="radio"]+span:before, [type="radio"]+span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 4px;
+    width: 29px;
+    height: 29px;
+    z-index: 0;
+    -webkit-transition: .28s ease;
+    transition: .28s ease;
+}

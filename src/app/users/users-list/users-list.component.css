@@ -1,0 +1,22 @@
+.bold {
+    font-weight: 700;;
+}
+.tblheader {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.tblborder div.tbltr {
+    border-top: 1px solid #eee;
+}
+
+.tblborder div.tbltr:first-child {
+    border-top: 0px !important;
+}
+
+.tblborder div.tbltr:last-child {
+    border-bottom: 1px solid #eee;
+}
+
+.f1-2rem{
+    font-size: 1.2rem !important;
+}

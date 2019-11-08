@@ -1,0 +1,90 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+  <div class="container-fluid">
+      <a class="navbar-brand active" href="#">
+          <svg-icon src="../assets/Logo.svg" [stretch]="true"
+                    [svgStyle]="{'width.rem':12, 'height.rem':4 ,'fill':'rgb(150,50,255)','padding.px':10}">
+            </svg-icon>
+        
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse pl-5" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link pl-0" href="#">
+                  <svg-icon  src="../assets/ico_dashboard.svg"  
+                  [applyCss]="true" class="svgStyleDefault">
+                  </svg-icon>
+                  <span> Dashboard</span>
+                </a>
+              </li>
+              <li class="nav-item " >
+                  <a class="nav-link" href="#">
+                      <svg-icon src="../assets/ico_users.svg" [stretch]="true"
+                      [applyCss]="true" class="svgStyleDefault">
+                    </svg-icon>
+                      <span> Users</span>
+                    </a>
+              </li>
+              <li class="nav-item " >
+                  <a class="nav-link" href="#">
+                      <svg-icon src="../assets/ico_sessionmanager.svg" [stretch]="true"
+                      [applyCss]="true" class="svgStyleDefault">
+                    </svg-icon>
+                      <span> Session Manager</span>
+                    </a>
+              </li>
+            </ul>
+            <div class=" ">
+             
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                      <a class="nav-link">
+                        <svg-icon src="../assets/ico_notification.svg" [stretch]="true"
+                        [applyCss]="true" class="svgStyleDefault">
+                        </svg-icon>
+                        <span></span>
+                      </a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link svgStyleDefault">
+                      <img _ngcontent-cdf-c0="" alt="" src="../assets/ico_user.svg" >
+                    <span> Session Manager</span>
+                    <svg-icon src="../assets/ico_downarrow.svg" [stretch]="true"
+                      [applyCss]="true" class="svgStyleDownArrow" style="margin-left: 20px;">
+                    </svg-icon>
+                  </a>
+                </li>
+                
+                </ul>
+            </div>
+          </div>
+  </div>
+</nav>
+
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-12 px-5">
+      <app-users></app-users>
+
+    </div>
+  </div>
+</div>
+
+
+<svg id="svg" style="display: none;">
+    <defs>
+      <filter id="id-of-your-filter">
+        <feColorMatrix 
+          color-interpolation-filters="sRGB"
+          type="matrix"
+          values="0.91 0   0   0   0
+                  0   0.67  0   0   0
+                  0   0   0.00  0   0
+                  0   0   0   1   0 "/>
+      </filter>
+    </defs>
+  </svg>
+  

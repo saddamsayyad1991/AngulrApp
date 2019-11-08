@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+ body  {
+     background-color: #3f4342 !important;
+ }
+
+.vmiddle span {
+    vertical-align: 9px;
+    padding-left: 5px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .btn {
+    background-color: #feaf2a !important;
+    border-color: #feaf2a !important;
+  }
+  .modal-contentt120 {
+    top: 120px !important;
+  }
+
+  .svgStyleDefault svg {
+    width: 1.5rem !important;
+    height: 1.5rem !important; 
+    fill: #ffff;
+    padding: 0px;
+    margin-top:-20px; 
+  }
+
+  .svgStyleDownArrow svg {
+    width: 1rem !important;
+    height: 1rem !important; 
+    fill: #ffff;
+    padding: 0px;
+    margin-top:-20px; 
+  }
+
+  .svgStyleDefault img {
+    width: 1.5rem !important;
+    height: 1.5rem !important; 
+    fill: #ffff;
+    padding: 0px;
+    margin-top:-20px; 
+  }
+
+  .navbar {
+    height: 6.5rem !important;
+    background-color: #282828 !important;
+    font-size: 1rem !important;
+}
+  /* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .navbar {
+      height: 6.5rem !important;
+      background-color: #282828 !important;
+      font-size: 1rem !important;
+  }
+ }
+
+ /* // Extra large devices (large desktops, 1400px and up) */
+ @media (min-width: 1500px) { 
+      .navbar {
+        height: 6.5rem !important;
+        background-color: #282828 !important;
+        font-size: 1.5rem !important;
+    }
+    .svgStyleDefault svg {
+      width: 2.5rem !important;
+      height: 2.5rem !important; 
+      fill: #ffff;
+      padding: 0px;
+      margin-top:-20px; 
+    }
+  
+    .svgStyleDownArrow svg {
+      width: 1rem !important;
+      height: 1rem !important; 
+      fill: #ffff;
+      padding: 0px;
+      margin-top:-20px; 
+    }
+  
+    .svgStyleDefault img {
+      width: 2.5rem !important;
+      height: 2.5rem !important; 
+      fill: #ffff;
+      padding: 0px;
+      margin-top:-20px; 
+    }
+}

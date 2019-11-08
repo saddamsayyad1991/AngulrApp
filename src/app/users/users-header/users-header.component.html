@@ -1,0 +1,33 @@
+<div class="row px-5">
+    <div class="col-2  pt-5" style="font-size: 2rem;">
+        <img src="../../assets/ico_users.svg" style="width: 3rem;">
+        <span style="padding-left: 1rem;">Users</span>
+    </div>
+    <div class="col-10 float-right px-5 pt-5 float-right" style="font-size: 2rem;">
+        <div class="row ">
+            <div class="input-group input-group-lg mb-3 col-4 float-right offset-5">
+                <input type="text" class="form-control form-controlcuston" placeholder="Search" [(ngModel)]="searchtext"
+                (keyup.enter)="onEnter()"
+                    style="border-radius: 0px;" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">
+                            <svg-icon src="../assets/ico_search.svg" [stretch]="true"
+                            [svgStyle]="{'width.rem':1.5, 'height.rem':1.5 ,'fill':'rgb(150,50,255)','padding.px':1,'margin-top.px': 0}">
+                          </svg-icon>
+                    </span>
+                </div>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary m-m-9 btn-lg col-12 pl-1 py-2" (click)="onClickShowModel()">
+                        <svg-icon src="../assets/ico_add.svg" [stretch]="true"
+                        [svgStyle]="{'width.rem':1.5, 'height.rem':1.5 ,'fill':'rgb(150,50,255)','padding.px':1,'margin-top.px': 0}">
+                      </svg-icon>
+                    Add New
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-user-model></app-user-model>

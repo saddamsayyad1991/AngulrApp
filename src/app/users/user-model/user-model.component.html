@@ -1,0 +1,88 @@
+
+
+<ng-template #template class="">
+
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12">
+    
+                    <a class="float-right link" (click)="modalRef.hide()">
+                            <svg-icon src="../../../assets/ico_close.svg" [stretch]="true"
+                            [svgStyle]="{'width.rem':1.5, 'height.rem':1.5 ,'margin-right.px':10}">
+                            </svg-icon> 
+                        </a>
+                </div>
+            </div>
+            <form #f="ngForm">
+                <div class="row px-4 pt-3">
+                    <div class="col-12 mb-4">
+                        <span class="modal-title pull-left">{{ strAction }} User</span>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="form-group input-group-lg">
+                            <input type="text" class="form-control" placeholder="Name" name="firstName" #firstName="ngModel" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" maxlength="30"
+                            [(ngModel)]="user.name">
+                            <div class="text-danger" *ngIf="firstName.invalid && (firstName.touched || isSubmited)">
+                                Valid name is required.
+                              </div>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="col-12 mb-3">
+                        <div class="form-group input-group-lg">
+                            <input type="email" class="form-control" placeholder="Email" name="email" #email="ngModel" [(ngModel)]="user.email" required email maxlength="80">
+                            <div class="text-danger" *ngIf="email.invalid && (email.touched || isSubmited)">
+                                Valid email is required.
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="form-check form-check-inline pr-2">
+                                <label class="form-check-label customRadio" style="font-size: 1.4rem;" for="inlineRadio1">
+                                    <input class="with-gap" type="radio" name="roleType" id="inlineRadio1" [(ngModel)]="user.roleType"
+                                        #roleType="ngModel" required [value]="'Admin'">
+                                    <span>Admin</span>
+                                </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                                <label class="form-check-label customRadio" style="font-size: 1.4rem;" for="inlineRadio2">
+                                        <input class="with-gap" type="radio" name="roleType" id="inlineRadio2" [(ngModel)]="user.roleType"
+                                            #roleType="ngModel" required [value]="'Customer Executive'">
+                                        <span>Customer Executive</span>
+                                    </label>
+                        </div>
+                        
+                        <div class="text-danger" *ngIf="roleType.invalid && (roleType.touched || isSubmited)">
+                            Select valid user role.
+                          </div>
+                    </div>
+            
+                    <div class="col-12 mb-3">
+                        <div class="form-group input-group-lg">
+                            <input type="text" class="form-control" minlength=10 maxlength=10  pattern="[0-9]+" required
+                            name="mobile" #mobile="ngModel"
+                            [(ngModel)]="user.mobile"
+                            placeholder="Mobile Number (Optional)">
+                            <div class="text-danger" *ngIf="mobile.invalid && (mobile.touched || isSubmited)">
+                                Valid mobile no. is required.
+                              </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 mb-3">
+                           <button class="btn btn-success btn-lg col-12" (click)="onSubmitClick(f)" [disabled]="showLoader">
+                               {{ strAction | uppercase }} USER
+                           </button>
+                    </div>
+                    <div class="col-12 mb-3" [hidden]="successMessage ===''">
+                            <div class="alert alert-success">
+                                {{ successMessage }}
+                            </div>
+                     </div>
+
+                </div>
+    
+            </form>
+        </div>
+    </ng-template>

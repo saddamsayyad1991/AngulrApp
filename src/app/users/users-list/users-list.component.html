@@ -1,0 +1,38 @@
+<div class="col-12 tblborder pt-4">
+    <div class="row pl-5 py-3 f1-2rem tblheader" >
+            <div class="col-3 pl-0 bold">NAME</div>
+            <div class="col-3 col-xl-4 bold">EMAIL</div>
+            <div class="col-3 col-xl-2 bold">ROLE TYPE</div>
+            <div class="col-2 bold">STATUS</div>
+            <div class="col-1 bold"></div>
+    </div>
+</div>
+<div class="col-12 tblborder pt-0" style="height: 68vh;max-height: 68vh;padding-top: 1.6rem;overflow: scroll;overflow-x: hidden;"
+        infinite-scroll
+        [infiniteScrollDistance]="modalScrollDistance"
+        [infiniteScrollThrottle]="modalScrollThrottle"
+        [scrollWindow]="false"
+        (scrolled)="onScroll()">
+    <div class="row pl-5 py-3 tbltr f1-2rem" 
+        *ngFor="let user of usersList"
+        
+    >
+            <div class="col-3 pl-0 ">{{ user.name }}</div>
+            <div class="col-3 col-xl-4">{{ user.email }}</div>
+            <div class="col-3 col-xl-2">{{ user.roleType }}</div>
+            <div class="col-2"> 
+                <svg-icon src="{{ setStatusImage(user.status) }}" [stretch]="true"
+                [svgStyle]="{'width.rem':.8, 'height.rem':.8 ,'margin-right.px':10}">
+                </svg-icon> 
+                {{ user.status }}</div>
+            <div class="col-1">
+                <a (click)="onClickShowModel(user)">
+                    <img src="../../../assets/ico_edit.svg" alt="">
+                </a>
+            </div>
+    </div>
+    <div class="col-12 text-center" [hidden]="!isLoading">
+        <h3>loading please wait...</h3>
+    </div>
+    
+</div>
